@@ -34,3 +34,22 @@ Laporan Resmi Praktikum Modul 5 Jaringan Komputer 2020 Kelompok C07 (0099 &amp; 
 
 ### langkah 4 memberikan ip untuk Sidoarjo da Gresik menggunakan DHCP Server
 
+![alt text](https://github.com/NaufalRafi-hub/Jarkom_Modul5_Lapres/blob/main/imageprak5/dhcpserv_mojo.jpg)
+
+### 4.A `nano /etc/default/isc-dhcp-server` dalam mojokerto
+### 4.B menambahkan `INTERFACESv4="eth0"`
+
+![alt text](https://github.com/NaufalRafi-hub/Jarkom_Modul5_Lapres/blob/main/imageprak5/dhcprelay_mojo.jpg)
+
+### 4.C `nano /etc/dhcp/dhcpd.conf` dalam mojokerto
+### 4.D menambahkan seperti digambar
+
+![alt text](https://github.com/NaufalRafi-hub/Jarkom_Modul5_Lapres/blob/main/imageprak5/dhcprelay_kediri.jpg)
+
+### 4.E `nano /etc/default/isc-dhcp-relay` dalam kediri
+### 4.F menambahkan dalam SERVERS=`"10.151.77.67"`
+
+![alt text](https://github.com/NaufalRafi-hub/Jarkom_Modul5_Lapres/blob/main/imageprak5/dhcprelay_batu.jpg)
+
+### 4.G `nano /etc/default/isc-dhcp-relay` dalam batu
+### 4.H menambahkan dalam SERVERS=`"10.151.77.67"`
