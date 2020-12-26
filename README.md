@@ -110,11 +110,11 @@ langkah :
 + `nano four.sh` pada malang
 + tulis sesuasi keinginan soal 7:00 - 17:00 hari senin sampe jumat selain itu di reject
 
-`iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
+`iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT`
 
-iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT
+`iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 17:01 --timestop 06:59 -j REJECT`
 
-iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Sat,Sun -j REJECT`
+`iptables -A INPUT -s 192.168.0.2/24 -m time --timestart 07:00 --timestop 17:00 --weekdays Sat,Sun -j REJECT`
 
 + `bash four.sh`
 + `date`
@@ -144,12 +144,12 @@ langkah :
 
 langkah :
 + `nano seven.sh` pada surabaya, malang, dan mojokerto
-+ lalu input `iptables -N LOGGING 
++ lalu input `iptables -N LOGGING`
 
-iptables -A FORWARD -j LOGGING 
+`iptables -A FORWARD -j LOGGING`
 
-iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4 
+`iptables -A LOGGING -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4 `
 
-iptables -A LOGGING -j DROP`
+`iptables -A LOGGING -j DROP`
 
 + `bash seven.sh`
